@@ -24,7 +24,7 @@ const NavBar = () => {
 
                 <Link onClick={FecharMenu} to='/'>HOME</Link>
                 <Link onClick={FecharMenu} to="/cursos"> CURSOS</Link>
-                <Link onClick={FecharMenu} to="/entrenimentos">ENTERTENIMENTOS</Link>
+                <Link onClick={FecharMenu} to="/entretenimentos">ENTRETENIMENTOS</Link>
                 <Link onClick={FecharMenu} to="/sobre">SOBRE</Link>
 
 
@@ -42,7 +42,7 @@ const NavBar = () => {
                 
                 <Link onClick={FecharMenu} to='/'>HOME</Link>
                 <Link onClick={FecharMenu} to="/cursos"> CURSOS</Link>
-                <Link onClick={FecharMenu} to="/entrenimentos">ENTERTENIMENTOS</Link>
+                <Link onClick={FecharMenu} to="/entretenimentos">ENTRETENIMENTOS</Link>
                 <Link onClick={FecharMenu} to="/sobre">SOBRE</Link>
             </section>
         </div>

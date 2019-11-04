@@ -15,7 +15,7 @@ import Curso from './componentes/cadastro/Cursos';
 import Cadastro from './componentes/entreterimentos/Cadastro';
 import Lista_E from './componentes/lista_de_entre/Lista_E';
 import Sobre from './componentes/Sobre/Sobre';
-
+import FinaC from './componentes/FinalC/FinalC';
 import FinalE from './componentes/finalE/FinalE';
 
 
@@ -33,6 +33,8 @@ const App = () => {
       <Route path="/cadastrocursos" component={Curso}/>
       <Route path="/cadastroentre" component={Cadastro}/>
       <Route path="/finale" component={FinalE} />
+      <Route path="/finalc"component={FinaC} />
+      <Route path="/sobre" component={Sobre}/>
 
 
 
