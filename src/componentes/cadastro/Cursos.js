@@ -5,124 +5,106 @@ import './Cursos.scss';
 import Button from './Button';
 
 const Curso = () => {
-    const [nome, setNome] = useState("");
-    const [rg, setRg] = useState("");
-    const [cpf, setCpf  ] = useState("");
-    const [idade, setIdade] = useState(0);
-    const [nascimento , setNascimento] = useState("");
-    const [endereco, setEndereco] = useState("");
-    const [numero, setNumero] = useState("");
-    const [telefone, setTelefone] = useState("");
-    const [email, setEmail] = useState("");
-    const [horario, setHorario] = useState("");
-    const [sexo, setSexo] = useState("");
+    const nomeRef = React.useRef("");
+    const idadeRef = React.useRef("");
+    const rgREf = React.useRef("");
+    const cpfRef = React.useRef("");
+    const nascimentoRef = React.useRef("");
+    const sexoRef = React.useRef("");
+    const emailRef = React.useRef("");
+    const telefoneRef = React.useRef("");
+    const bairroRef = React.useRef("");
+    const enderecoRef = React.useRef("");
+    const residenciaRef = React.useRef("");
+    const periodoRef = React.useRef("");
 
 
-    return(
-    <div className="cadastro">
-        
-        <h1>Matricule-se aqui!</h1>
-        <form>
-    
-            <Input 
-            type="Nome" 
-            label="Nome" 
-            placeholder="Digite o nome"
-            atualizarState={setNome}
-            value={nome}
-            obrigatorio
-            />
 
-            <Input 
-            type="text" 
-            label="Rg" 
-            placeholder="Digite seu Rg"
-            atualizarState={setRg}
-            value={rg}
-            obrigatorio
-            />
+    const Cadastrar = (event) => {
+        event.preventDefault();
 
-            <Input 
-            type="text" 
-            label="Cpf" 
-            placeholder="Digite seu Cpf"
-            atualizarState={setCpf}
-            value={cpf}
-            obrigatorio
-            />
-            
-            <Input 
-            type="text" 
-            label="Idade" 
-            placeholder="Idade"
-            atualizarState={setIdade}
-            value={idade}
-            />
+        fetch('http://localhost:8000/api/cursos/', {
+            method: 'POST',
+            body: JSON.stringify({
+                nome: nomeRef.current.value,
+                idade: idadeRef.current.value,
+                rg: rgREf.current.value,
+                cpf: cpfRef.current.value,
+                dataNascimento: nascimentoRef.current.value,
+                sexo: sexoRef.current.value,
+                email: emailRef.current.value,
+                telefone: telefoneRef.current.value,
+                endereco: enderecoRef.current.value,
+                bairro: bairroRef.current.value,
+                numero_de_recidencia: residenciaRef.current.value,
+                periodo: periodoRef.current.value,
 
-            <Input 
-            type="text" 
-            label="Data de Nascimento" 
-            placeholder="Data de Nascimento"
-            atualizarState={setNascimento}
-            value={nascimento}
-            />
+            }),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }).then(value => {
+            return value.json()
+        }).then(value => {
+            if (value.id) {
 
-            <Input 
-            type="text" 
-            label="Endereço" 
-            placeholder="Endereço"
-            atualizarState={setEndereco}
-            value={endereco}
-            />
+                alert("uau você acaba de se cadastrar ")
+                localStorage.setItem("id", value.id)
+                window.location = "/finalc"
 
-            <Input 
-            type="text" 
-            label="Número de residência" 
-            placeholder="Número de residência"
-            atualizarState={setNumero}
-            value={numero}
-            />
+            } else {
+                alert("houve um erro")
+            }
 
-            <Input 
-            type="text" 
-            label="Telefone" 
-            placeholder="Digite seu Telefone"
-            atualizarState={setTelefone}
-            value={telefone}
-            />
+            nomeRef.current.value = "";
+            idadeRef.current.value = "";
+            rgREf.current.value = "";
+            cpfRef.current.value = "";
+            nascimentoRef.current.value = "";
+            sexoRef.current.value = "";
+            emailRef.current.value = "";
+            telefoneRef.current.value = "";
+            enderecoRef.current.value = "";
+            bairroRef.current.value = "";
+            residenciaRef.current.value = "";
+            periodoRef.current.value = "";
 
-            <Input 
-            type="email" 
-            label="Email" 
-            placeholder="Digite seu email"
-            atualizarState={setEmail}
-            value={email}
-            />
-            
-            <Input 
-            type="text" 
-            label="Horário" 
-            placeholder="Horário"
-            atualizarState={setHorario}
-            value={horario}
-            />
-
-            <Input 
-            type="select" 
-            option value="Masculino"
-            option value="Feminino"
-            label="Sexo" 
-            placeholder="Digite seu sexo"
-            atualizarState={setSexo}
-            value={sexo}
-            />
-        
-
-
-           < Link to="/finalc"><Button>Cadastrar</Button> </Link>
-            </form> 
+        })
+    }
+    return (
+        <div className="Cursos">
+            <h1>Matricule-se aqui!</h1>
+            <form onSubmit={Cadastrar}>
+                <input type="text" ref={nomeRef} placeholder={"digite seu nome"} />
+                <input type="text" ref={idadeRef} placeholder={"digite sua idade"} />
+                <input type="text" ref={rgREf} placeholder={"digite seu RG"} />
+                <input type="text" ref={cpfRef} placeholder={"digite seu CPF"} />
+                <input type="text" ref={nascimentoRef} placeholder={"digite sua data de nascimento"} />
+                <label >Sexo:</label>
+                <select ref={sexoRef} name="sexo" >
+                    <option value="sexo">---</option>
+                    <option value="M"> Masculino</option>
+                    <option value="F"> Feminino</option>
+                    <option value="ND">Não definido</option>
+                </select>
+                <input type="text" ref={emailRef} placeholder={"digite seu email"} />
+                <input type="text" ref={telefoneRef} placeholder={"digite seu telefone"} />
+                <input type="text" ref={enderecoRef} placeholder={"digite seu endereco"} />
+                <input type="text" ref={bairroRef} placeholder={"digite o bairro que mora"} />
+                <input type="text" ref={residenciaRef} placeholder={"digite o numero de sua residencia"} />
+                <label >Periodo:</label>
+                <select ref={periodoRef} name="periodo" >
+                    <option value="perido">---</option>
+                    <option value="M">Manhã</option>
+                    <option value="T">Tarde</option>
+                    <option value="N"> Noite </option>
+                </select>
+                <Button> Registar</Button>
+            </form>
         </div>
-    );
+    )
 }
+
+
 
 export default Curso;

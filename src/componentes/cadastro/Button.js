@@ -1,10 +1,11 @@
 import React from 'react';
-import './Button.scss';
+import './Button.scss'
 
-const Button = ({children, funcao}) => {
+const Button = ({onclick, children}) => {
 
     return(
-        <button onClick={funcao}>{children}</button>
+        
+        <button onClick={onclick}>{children}</button>
     );
 }
 
