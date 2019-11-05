@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import "./NavBar.scss"
+import desc from "../imagem/nat-logo.png";
 
 const NavBar = () => {
     const [menuAtivo, setMenuAtivo] = useState(false);
@@ -36,7 +37,9 @@ const NavBar = () => {
                     <span className={`${menuAtivo ? "sumirIgualTiro" : ""}`}></span>
                     <span className={`${menuAtivo ? "virarX2" : ""}`}></span>
                 </div>
-                <h1>DESCOMPLICA</h1>
+                <div className='Imag'>
+                <img src={desc}/>
+                </div>
             </nav>
             <section className={`menu ${menuAtivo ? "ativo" : ""}`}>
                 
