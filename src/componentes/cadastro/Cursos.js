@@ -46,7 +46,7 @@ const Curso = () => {
         }).then(value => {
             return value.json()
         }).then(value => {
-            if (value.id) {
+            if (value.id && value.idade >= 16) {
 
                 alert("uau você acaba de se cadastrar ")
                 localStorage.setItem("id", value.id)
