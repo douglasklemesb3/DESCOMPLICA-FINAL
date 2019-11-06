@@ -5,13 +5,14 @@ import  '../finalE/FinalE.scss';
 
 
 const FinalE= () => {
+    let aleatorio = Math.floor(Math.random() * 10000);
     return(
         <div className='texto'>
             <h1>Parabéns!</h1>
             <div className="container">
                 <p>Cadastro concluido!</p>
 
-                <p>Seu número de inscrição é: 123</p>
+                <p>Seu número de inscrição é: {aleatorio}</p>
 
                 <p>Recomendaçoes:<br/>
                 <br/>

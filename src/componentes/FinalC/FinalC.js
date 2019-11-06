@@ -3,6 +3,9 @@ import lista from '../lista_de_cursos/lista.js'
 import Lista from '../lista_de_entre/Lista.js';
 import '../FinalC/FinalC.scss'
 const FinalC = () => {
+
+    let aleatorio = Math.floor(Math.random() * 10000);
+    
     return (
 
         <div className='texto'>
@@ -10,7 +13,7 @@ const FinalC = () => {
             <div className="container">
                 <p>Cadastro concluido!</p>
 
-                <p>Seu número de inscrição é: 123</p>
+                <p>Seu número de inscrição é {aleatorio}</p>
 
                 <p>Recomendaçoes:<br/>
                 <br/>
