@@ -1,10 +1,9 @@
-
-
 .texto{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    height: 100%;
+    background-color: black;
     h1{
         color: rgb(19, 150, 19);
     }
@@ -19,7 +18,7 @@
     align-items: center;
     justify-content: center;
     text-align: left;
-    margin-top: 60px;
+    // margin-top: 60px;
 }
 
 

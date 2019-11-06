@@ -4,8 +4,8 @@ import Lista from '../lista_de_entre/Lista.js';
 import '../FinalC/FinalC.scss'
 const FinalC = () => {
     return (
-
-        <div className='texto'>
+    <div className="FinalC">
+        <div className="texto">
             <h1>Parabéns!</h1>
             <div className="container">
                 <p>Cadastro concluido!</p>
@@ -25,7 +25,9 @@ const FinalC = () => {
             </div>
             
         </div>
+    </div>
     )
+
 }
 
 

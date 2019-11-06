@@ -1,46 +1,16 @@
 .Home{
     width: 100%;
     height: 100%;
-        .descom{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-size: cover;
-            width: 100%;
-            height: 250px;
-
+    background-image: url('../imagem/nat-gif.gif');
         img{
-            width: 350px;
-            height: 250px;
-            display: flex;
-            align-items: center;
-        }
-
-
-        }
-    }
-    aside{
-        background-color: #e3e3e3;
-        width: 100%;
-        height: 300px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-
-        p{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size:14pt
-            
-            
-        }
-    }
+            width: 50px;
+            height: 100%;
+        }      
+}
     footer{
         width: 100%;
         height: 100px;;
-        background-color: grey;
+        background-color:black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -55,7 +25,7 @@
                         a{
                             width:100%;
                             height: 20px;
-                            background-color: grey;
+                            background-color:black;
                             img{
                 
                                 width: 40px;
@@ -65,3 +35,14 @@
                         }
         }
     }
+
+article{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+article img{
+    width: 100%;
+}

@@ -5,6 +5,7 @@ import Thiago from '../imagem/thiagoooo.jpeg';
 import Julio from '../imagem/julio3.jpeg';
 import Douglas from '../imagem/Douglas.jpeg';
 import Natyele from '../imagem/Natyele.jpeg';
+import log from '../imagem/linkedin.png'
 
 const Sobre = () => {
     return(
@@ -17,11 +18,11 @@ const Sobre = () => {
             <h2>DESENVOLVEDORES:</h2>
         
         <div className="Icones">
-           <span> <img src={karen} alt={karen}/>Karen Nunes</span>
-           <span> <img src={Thiago} alt={Thiago}/>Thiago Mendes</span>
-           <span> <img src={Julio} alt={Julio}/>Julio Cesar</span>
-           <span> <img src={Douglas} alt={Douglas}/>Douglas Klemes</span>
-           <span> <img src={Natyele} alt={Natyele}/>Natyele Bertolani</span>
+           <span> <img src={karen} alt={karen}/><p className="nomes">Karen Nunes</p></span>
+           <span> <img src={Thiago} alt={Thiago}/><p className="nomes">Thiago Mendes</p></span>
+           <span> <img src={Julio} alt={Julio}/><p className="nomes">Julio Cesar</p></span>
+           <span> <img src={Douglas} alt={Douglas}/><p  className="nomes">Douglas Klemes</p></span>
+           <span> <img src={Natyele} alt={Natyele}/><p  className="nomes">Natyele Bertolani</p></span>
 
         </div>
 
