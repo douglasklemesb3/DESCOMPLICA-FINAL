@@ -6,6 +6,7 @@ import Julio from '../imagem/julio3.jpeg';
 import Douglas from '../imagem/Douglas.jpeg';
 import Natyele from '../imagem/Natyele.jpeg';
 import log from '../imagem/linkedin.png'
+import {Link} from 'react-router-dom';
 
 const Sobre = () => {
     return(
@@ -18,11 +19,49 @@ const Sobre = () => {
             <h2>DESENVOLVEDORES:</h2>
         
         <div className="Icones">
-           <span> <img src={karen} alt={karen}/><p className="nomes">Karen Nunes</p></span>
-           <span> <img src={Thiago} alt={Thiago}/><p className="nomes">Thiago Mendes</p></span>
-           <span> <img src={Julio} alt={Julio}/><p className="nomes">Julio Cesar</p></span>
-           <span> <img src={Douglas} alt={Douglas}/><p  className="nomes">Douglas Klemes</p></span>
-           <span> <img src={Natyele} alt={Natyele}/><p  className="nomes">Natyele Bertolani</p></span>
+           <span>
+                <img src={karen} alt={karen}/>
+                <div className="alinhar">
+                    <a href=""><img className="linkedin" src={log} alt="linkedin"/></a>
+                    <p className="nomes">Karen Nunes</p>
+
+                </div>
+            </span>
+
+           <span>
+                <img src={Thiago} alt={Thiago}/>
+                <div className="alinhar">
+                    <a href="https://www.linkedin.com/in/thiago-mendes-174190193"><img className="linkedin"src={log} alt="linkedin"/></a>
+                    <p className="nomes">Thiago Mendes</p>
+
+                </div>
+            </span>
+           
+           <span>
+                <img src={Julio} alt={Julio}/>
+                <div className="alinhar">
+                    <a href="https://www.linkedin.com/in/julio-marques-0a7a31197/"><img className="linkedin" src={log} alt="linkedin"/></a>
+                    <p className="nomes">Julio Cesar</p>
+                </div>
+            </span>
+           
+           <span>
+                <img src={Douglas} alt={Douglas}/>
+                <div className="alinhar">
+                    <a href="https://www.linkedin.com/in/douglas-klemes-514a90192/"><img className="linkedin" src={log} alt="linkedin"/></a>
+                    <p  className="nomes">Douglas Klemes</p>
+                    
+                </div>
+            </span>
+           
+           <span>
+                <img src={Natyele} alt={Natyele}/>
+                <div className="alinhar">
+                    <a href="https://www.linkedin.com/in/natyele-bertolani-4a6a31197/"><img className="linkedin" src={log} alt="linkedin"/></a>
+                    <p  className="nomes">Natyele Bertolani</p>
+
+                </div>
+            </span>
 
         </div>
 

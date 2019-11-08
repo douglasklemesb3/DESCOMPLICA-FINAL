@@ -1,33 +1,56 @@
-.cadastro{
-    background-image: url('../imagem/CadastroFundo\ .jpg');
+.Cursos{
     background-size: cover;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    background-color: rgba(211, 204, 204, 0.973);
+
     form{
-        width: 100%;
+        margin-left:50px;
+    }
+    h1{
+        display: flex;
+        align-items: center;
         justify-content: center;
+        color: #64cd2a;
+    }
+    
+
+    .formu{
+        width:70%;
+        height: 26px;
         display: flex;
         align-items: center;
         flex-direction: column;
-    
+        justify-content: center;
+        border-radius: 10px;
+        margin: 20px;
+        background-color: rgb(168, 164, 164);
+        font-size: 16pt;
+        border-color: #64cd2a;
+        &::placeholder{
+            color:white;
+            text-align: center;
+        }
+        
+        
+        
     }
     select{
-        width: 200px;
+        width: 70%;
         height: 30px;
         outline: none;
-
-        border-radius: 10px;
         margin-bottom: 10px;
         padding: 0 10px;
-        color: rgb(4, 5, 5);
-        border: none;
+        border-color:#64cd2a;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
-
-        background-color: white;   
-      
+        background-color:rgba(211, 204, 204, 0.973);
+        margin: 20px;
+        
     }
+    label{
+        margin-left: 20px;
+        color:black;
+  }
+  
 }

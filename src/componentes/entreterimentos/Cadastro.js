@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import "./Cadastro.scss";
 import Input from "./Input";
 import Button from './Button';
+import { API_URL } from '../../api';
+
 
 const Cadastro = () => {
     const nomeRef = React.useRef("");
@@ -22,7 +24,7 @@ const Cadastro = () => {
     const Cadastrar = (event) => {
         event.preventDefault();
 
-        fetch('http://127.0.0.1:8000/api/entretenimentos/', {
+        fetch(API_URL + '/api/entretenimentos/', {
             method: 'POST',
             body: JSON.stringify({
                 nome: nomeRef.current.value,
@@ -47,7 +49,6 @@ const Cadastro = () => {
         }).then(value => {
             if (value.id && value.idade >= 4) {
 
-                alert("uau você acaba de se cadastrar ")
                 localStorage.setItem("id", value.id)
                 window.location = "/finale"
 
@@ -74,11 +75,16 @@ const Cadastro = () => {
     <div className="Cursos">
     <h1>Matricule-se aqui!</h1>
     <form onSubmit={Cadastrar}>
-        <input type="text" ref={nomeRef} placeholder={"digite seu nome"} />
-        <input type="text" ref={idadeRef} placeholder={"digite sua idade"} />
-        <input type="text" ref={rgREf} placeholder={"digite seu RG"} />
-        <input type="text" ref={cpfRef} placeholder={"digite seu CPF"} />
-        <input type="text" ref={nascimentoRef} placeholder={"digite sua data de nascimento"} />
+        <label>Nome:</label>
+        <input className="formu" type="text" ref={nomeRef} placeholder={"Digite seu nome"} />
+        <label>Idade:</label>
+        <input className="formu" type="text" ref={idadeRef} placeholder={"Digite sua idade"} />
+        <label>RG:</label>
+        <input className="formu" type="text" ref={rgREf} placeholder={"Ex:00.000.000.00"} />
+        <label>CPF:</label>
+        <input className="formu" type="text" ref={cpfRef} placeholder={"Ex:000.000.000.00"} />
+        <label>Data de Nascimento:</label>
+        <input className="formu" type="text" ref={nascimentoRef} placeholder={"Ex:00/00/0000"} />
         <label >Sexo:</label>
         <select ref={sexoRef} name="sexo" >
             <option value="sexo">---</option>
@@ -86,11 +92,16 @@ const Cadastro = () => {
             <option value="F"> Feminino</option>
             <option value="ND">Não definido</option>
         </select>
-        <input type="text" ref={emailRef} placeholder={"digite seu email"} />
-        <input type="text" ref={telefoneRef} placeholder={"digite seu telefone"} />
-        <input type="text" ref={enderecoRef} placeholder={"digite seu endereco"} />
-        <input type="text" ref={bairroRef} placeholder={"digite o bairro que mora"} />
-        <input type="text" ref={residenciaRef} placeholder={"digite o numero de sua residencia"} />
+        <label>Email:</label>
+        <input className="formu" type="text" ref={emailRef} placeholder={""} />
+        <label>telefone:</label>
+        <input className="formu" type="text" ref={telefoneRef} placeholder={"Ex:(00)00000-0000"} />
+        <label>Endereço:</label>
+        <input className="formu" type="text" ref={enderecoRef} placeholder={""} />
+        <label>Bairro:</label>
+        <input className="formu" type="text" ref={bairroRef} placeholder={""} />
+        <label>Número:</label>
+        <input className="formu" type="text" ref={residenciaRef} placeholder={"Ex:0000"} />
         <label >Periodo:</label>
         <select ref={periodoRef} name="periodo" >
             <option value="perido">---</option>

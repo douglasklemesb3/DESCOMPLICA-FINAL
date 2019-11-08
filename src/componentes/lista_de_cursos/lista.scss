@@ -4,9 +4,16 @@
     align-items: center;
     // background-color: rgba(0, 0, 0, 0.199);
     background-color: black;
+    a{
+        margin-right: 90px;
+        text-decoration: none;
+    }
     button{
         width: 150px;
         height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 30px;
         border: none;
         background-color:#64cd2a;

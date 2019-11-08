@@ -1,10 +1,10 @@
 import React from 'react';
 import './Home.scss';
 
-import face from '../imagem/facebook (2).png';
+import face from '../imagem/facebook (3).png';
 import inst from '../imagem/instagram (2).png';
-import you from '../imagem/youtube.png';
-import text from '../imagem/nat-3.png'
+import you from '../imagem/youtube (1).png';
+import text from '../imagem/nat-correto-gif.gif'
 const Home= () =>{
     return(
         <div>

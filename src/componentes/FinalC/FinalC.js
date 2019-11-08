@@ -10,23 +10,26 @@ const FinalC = () => {
     <div className="FinalC">
         <div className="texto">
             <h1>Parabéns!</h1>
-            <div className="container">
+                <div className="Final">
+                    <p>Cadastro concluido!</p>
+                    <p>Seu número de inscrição é {aleatorio}</p>
+                    <p>Recomendaçoes:</p>
+                    <p>Levar xerox dos seguintes documentos na primeira aula:</p>
+                    <p>- RG;</p>
+                    <p>- Comprovante de resideñcia;</p>
+                    <p>- CPF</p>
+
+                </div>
+            {/* <div className="container">
                 <p>Cadastro concluido!</p>
-
                 <p>Seu número de inscrição é {aleatorio}</p>
-
-                <p>Recomendaçoes:<br/>
-                <br/>
-
-
-                    Levar xerox dos seguintes documentos na primeira aula:<br/> <br/>
-                      - RG;<br/>
-                      - Comprovante de resideñcia;<br/>
-                      - CPF<br/>
-                </p>
-
-            </div>
-            
+                <p>Recomendaçoes:</p>
+                <p>Levar xerox dos seguintes documentos na primeira aula:</p>
+                <p>- RG;<p/>
+                <p>- Comprovante de resideñcia;<p/>
+                <p>- CPF<p/>
+             </div>
+             */}
         </div>
     </div>
     )

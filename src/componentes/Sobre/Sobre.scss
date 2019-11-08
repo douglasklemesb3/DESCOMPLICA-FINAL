@@ -57,8 +57,8 @@
    
             img{
                 border-radius: 100%;
-                width: 50px;
-                height: 50px;
+                width: 90px;
+                height: 90px;
                 margin-top: 12px;
             }
             .nomes{
@@ -66,16 +66,33 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-right: 20px;
+                margin-right: 18px;
+                margin: 5px;
                 
                 
             }
             .linkedin{
-                margin: 0;
+                width: 35px;
+                height: 35px;
+                margin: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
             }
+            .alinhar{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            
+            }
+            
+        
         }
     }
 
