@@ -11,8 +11,7 @@ const Home= () =>{
         <article className="gif">
             <img src={text}/>
 
-   
-        
+
         </article>
 
         <footer>

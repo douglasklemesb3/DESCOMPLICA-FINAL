@@ -24,7 +24,7 @@ const Curso = () => {
     const Cadastrar = (event) => {
         event.preventDefault();
 
-        fetch( API_URL +'/api/cursos/', {
+        fetch(API_URL +'/api/cursos/', {
             method: 'POST',
             body: JSON.stringify({
                 nome: nomeRef.current.value,
@@ -47,14 +47,14 @@ const Curso = () => {
         }).then(value => {
             return value.json()
         }).then(value => {
-            if (value.id && value.idade >= 16) {
+            if (value.id && value.idade >= 13) {
 
     
                 localStorage.setItem("id", value.id)
                 window.location = "/finalc"
 
             } else {
-                alert("houve um erro")
+                alert("Desculpe,seu Cadastro não foi realizado,por que você tem idade o suficiente.")
             }
 
             nomeRef.current.value = "";
@@ -77,15 +77,15 @@ const Curso = () => {
             <h1>Matricule-se aqui!</h1>
             <form onSubmit={Cadastrar}>
                 <label>Nome:</label>
-                    <input className="formu" type="text" ref={nomeRef} placeholder={"Digite seu nome"} />
+                    <input className="formu"  type="text" ref={nomeRef} placeholder={"Digite seu nome"} autoFocus/>
                 <label>Idade:</label>
-                    <input className="formu"  type="text" ref={idadeRef} placeholder={"Digite sua idade"} />
+                    <input className="formu"  type="text" ref={idadeRef} placeholder={"Digite sua idade"} autoFocus/>
                 <label>RG:</label>
-                    <input className="formu"  type="text" ref={rgREf} placeholder={"Ex:00.000.000.00"} />
+                    <input className="formu"  type="text" ref={rgREf} placeholder={"Ex:00.000.000.00"} autoFocus/>
                 <label>CPF:</label>
-                    <input className="formu"  type="text" ref={cpfRef} placeholder={"Ex:000.000.000.00"} />
+                    <input className="formu"  type="text" ref={cpfRef} placeholder={"Ex:000.000.000.00"} autoFocus/>
                 <label>Data de Nascimento:</label>
-                    <input className="formu"  type="text" ref={nascimentoRef} placeholder={"Ex:00/00/0000"} />
+                    <input className="formu"  type="text" ref={nascimentoRef} placeholder={"Ex:00/00/0000"} autoFocus/>
                 <label >Sexo:</label>
                 <select ref={sexoRef} name="sexo" >
                     <option value="sexo">---</option>

@@ -31,7 +31,7 @@ const NavBar = () => {
 
 
                 </div>
-                
+                  
                 <div onClick={AbrirMenu} id="menu-hamburguer">
                     <span className={`${menuAtivo ? "virarX1" : ""}`}></span>
                     <span className={`${menuAtivo ? "sumirIgualTiro" : ""}`}></span>

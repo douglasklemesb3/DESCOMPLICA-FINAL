@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import img from '../imagem/ballet.jpg';
 import ims from '../imagem/dancaventre.jpeg';
 
-const Lista = ({titulo,imagem,descricao}) =>{
+const Lista = ({titulo,imagem,descricao,local}) =>{
     return(
-        <div className="Lista">
+        <div className="lista">
             <h1>{titulo}</h1>
-            <img src={imagem} alt="imagem" />
-            <p>{descricao}</p>
+            <img src={imagem}alt="imagem" />
+            <p>{descricao}
+            <h2>{local}</h2>
+            </p>
            
           <Link to="/cadastroentre"><button> Inscreva-se</button></Link>
            

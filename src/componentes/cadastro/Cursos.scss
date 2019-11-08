@@ -1,7 +1,8 @@
 .Cursos{
+    margin-top: 79px;
     background-size: cover;
     width: 100%;
-    background-color: rgba(211, 204, 204, 0.973);
+    background-color: black;
 
     form{
         margin-left:50px;
@@ -15,17 +16,21 @@
     
 
     .formu{
+        outline: none;
         width:70%;
         height: 26px;
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        border-radius: 10px;
-        margin: 20px;
-        background-color: rgb(168, 164, 164);
+        background-color: black;
         font-size: 16pt;
-        border-color: #64cd2a;
+        border-top: black;
+        border-right: black;
+        border-left: black;
+        color: white;
+        margin: 20px;
+        border-bottom-color: #64cd2a;
         &::placeholder{
             color:white;
             text-align: center;
@@ -50,7 +55,7 @@
     }
     label{
         margin-left: 20px;
-        color:black;
+        color: #64cd2a;
   }
   
 }

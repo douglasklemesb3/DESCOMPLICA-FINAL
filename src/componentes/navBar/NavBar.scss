@@ -1,27 +1,29 @@
 .NavBar{
   position: fixed;
-    nav {
-      width: 100%;
+  width: 100%;
+  nav {
       height: 80px;
       background-color:black;
       display: flex;
       align-items: center;
       justify-content: center;
     .Imag{
-      width: 250px;
+      width: 230px;
       height: 70px;
-      margin-right: 25,px;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: black;
       color: black;
+      img{
+        width: 230px;
+      }
     }
     
       .ancora{
         display: none;
         a{
-            margin-top:25px;
+            margin-top:20px;
           text-decoration: none;
           color: white;
         }
@@ -32,7 +34,7 @@
         display: flex;
         justify-content: space-around;
         flex-direction: column;
-        margin: 0px 0px 0px 0px;
+        padding-left: 5%;
         
         span {
           width: 60px;
