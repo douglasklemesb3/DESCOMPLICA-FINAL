@@ -7,13 +7,15 @@
     width: 100%;
     height: 100%;
     margin: 0%;
+    display: flex;
+    align-items: center;
+    
     .Negrito{
         font-family: 'Bowlby One SC', cursive;
         font-size: 14pt;
         font-weight:200;
         color: #64cd2a;
-        
-    }
+        }
     h1{
         font-family: 'Bowlby One SC', cursive;
         font-size: 25pt;
@@ -22,12 +24,24 @@
         color: #64cd2a;
         display: flex;
         justify-content: center;
+        margin-top: 100px;
     }
     p{
-        margin-left: 40px;
         font-family: 'Varela Round', sans-serif;
-        font-size: 13pt;
-        color:white;
+        font-size: 17pt;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    
+    }
+    .texto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        width: 400px;
     }
     h2{
         font-family: 'Bowlby One SC', cursive;
@@ -36,7 +50,7 @@
         color: #64cd2a;
         display: flex;
         justify-content: center;
-
+        align-items: center;
     }
         .Icones{
             width:100%;
@@ -45,6 +59,7 @@
             flex-direction: column;
             justify-content: space-around;
             justify-content: center;
+            margin-left: 5px;
             span{
                 width: 50%;
                 height: 50%;
